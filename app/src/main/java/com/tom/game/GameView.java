@@ -39,6 +39,35 @@ public class GameView extends View {
         return posY;
     }
 
+    //寫這個方法可以節省MainActivity的程式碼，還有物件導向
+    public void moveRight(){
+        if(posX < getWidth()-250){
+            posX = posX+50;
+            invalidate();
+        }
+    }
+
+    public void moveLeft(){
+        if(posX>40){
+            posX = posX-50;
+            invalidate();
+        }
+    }
+
+    public void moveDown(){
+        if(posY < getHeight()-250){
+            posY = posY+50;
+            invalidate();
+        }
+    }
+
+    public void moveUp(){
+        if(posY>40){
+            posY = posY-50;
+            invalidate();
+        }
+    }
+
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
