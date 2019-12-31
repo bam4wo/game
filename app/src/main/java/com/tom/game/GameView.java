@@ -12,31 +12,10 @@ import android.view.View;
 import androidx.annotation.Nullable;
 
 public class GameView extends View {
-
     private float posX,posY = 400;
 
     public GameView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-    }
-
-    public void setPosX(float posX) {
-        if(posX > 0 && posX < getWidth()-200){
-            this.posX = posX;
-        }
-    }
-
-    public void setPosY(float posY) {
-        if(posY > 0 && posY < getHeight()-200){
-            this.posY = posY;
-        }
-    }
-
-    public float getPosX() {
-        return posX;
-    }
-
-    public float getPosY() {
-        return posY;
     }
 
     //寫這個方法可以節省MainActivity的程式碼，還有物件導向
@@ -81,8 +60,6 @@ public class GameView extends View {
         /*for(int i=0; i<getHeight()-bitmap.getHeight(); i+=50){
            canvas.drawBitmap(bitmap, 400, 300+i, paint);
                 }*/
-
-
 
     }
 }
